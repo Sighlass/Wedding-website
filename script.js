@@ -1,4 +1,4 @@
-const weddingDate = new Date("December 20, 2026 12:00:00").getTime();
+const weddingDate = new Date("October 1, 2026 12:00:00").getTime();
 
 function updateCountdown() {
 
@@ -47,3 +47,25 @@ function updateCountdown() {
 updateCountdown();
 
 setInterval(updateCountdown, 1000);
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll() {
+
+    reveals.forEach((element) => {
+
+        const windowHeight = window.innerHeight;
+
+        const elementTop = element.getBoundingClientRect().top;
+
+        const revealPoint = 100;
+
+        if (elementTop < windowHeight - revealPoint) {
+            element.classList.add("active");
+        }
+
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+
+revealOnScroll();
