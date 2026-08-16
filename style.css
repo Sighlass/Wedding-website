@@ -1,0 +1,462 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: #292722;
+    background: #fdfbf7;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Playfair Display", serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* NAVIGATION */
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 7%;
+
+    color: white;
+
+    z-index: 10;
+}
+
+.logo {
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar nav a {
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    opacity: 0.6;
+}
+
+
+/* HERO */
+
+.hero {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("images/couple.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.hero-content {
+    padding: 20px;
+}
+
+.small-title {
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(70px, 10vw, 140px);
+    font-weight: 400;
+    line-height: 0.9;
+}
+
+.hero h1 span {
+    display: block;
+    font-size: 50px;
+    margin: 15px 0;
+}
+
+.wedding-date {
+    margin: 35px 0;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.button {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    border: 1px solid white;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: white;
+    color: #292722;
+}
+
+
+/* GENERAL SECTIONS */
+
+.section {
+    padding: 110px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-heading p {
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+}
+
+.section-heading h2 {
+    font-size: 48px;
+    font-weight: 400;
+}
+
+
+/* STORY */
+
+.story-content {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.story-image {
+    height: 500px;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+
+    background: #e7e0d5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #777;
+}
+
+.story-text {
+    line-height: 1.9;
+    font-size: 16px;
+}
+
+.story-text p {
+    margin-bottom: 25px;
+}
+
+
+/* DETAILS */
+
+.details {
+    background: #f1ede6;
+}
+
+.details-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.detail-card {
+    background: #fdfbf7;
+
+    padding: 50px 30px;
+
+    text-align: center;
+}
+
+.detail-icon {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.detail-card h3 {
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.detail-card p {
+    margin-bottom: 8px;
+}
+
+.detail-card a {
+    display: inline-block;
+    margin-top: 15px;
+
+    text-decoration: underline;
+}
+
+
+/* COUNTDOWN */
+
+.countdown-section {
+    padding: 100px 7%;
+    text-align: center;
+}
+
+.countdown {
+    max-width: 800px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.countdown span {
+    display: block;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 55px;
+}
+
+.countdown small {
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+
+/* GALLERY */
+
+.gallery {
+    background: #f1ede6;
+}
+
+.gallery-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.gallery-item {
+    height: 300px;
+
+    background: #ddd5ca;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #777;
+}
+
+
+/* RSVP */
+
+.rsvp-form {
+    max-width: 650px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.rsvp-form input,
+.rsvp-form select,
+.rsvp-form textarea {
+    width: 100%;
+
+    padding: 16px;
+
+    border: 1px solid #ddd;
+
+    background: white;
+
+    font-family: inherit;
+
+    outline: none;
+}
+
+.rsvp-form textarea {
+    resize: vertical;
+}
+
+.rsvp-form button {
+    padding: 16px;
+
+    border: none;
+
+    background: #292722;
+
+    color: white;
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.rsvp-form button:hover {
+    opacity: 0.8;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 60px 20px;
+
+    background: #292722;
+
+    color: white;
+
+    text-align: center;
+}
+
+footer h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+.copyright {
+    margin-top: 25px;
+    opacity: 0.6;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 20px;
+    }
+
+    .navbar nav {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 70px;
+    }
+
+    .hero h1 span {
+        font-size: 35px;
+    }
+
+    .section {
+        padding: 80px 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 38px;
+    }
+
+    .story-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .story-image {
+        height: 400px;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .countdown {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .countdown span {
+        font-size: 45px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery-item {
+        height: 200px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 58px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
