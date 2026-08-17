@@ -18,5 +18,5 @@ $query=mysqli_query($conn, $sql);
 if ($query) {
     echo "RSVP submitted successfully!";
 } else 
-    echo"Error:".mysqli_error($conn)";
+    echo"Error:".mysqli_error($conn);
 ?>
