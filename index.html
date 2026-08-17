@@ -68,7 +68,7 @@
 
             <div class="story-image reveal">
                 <div class="image-placeholder">
-                    Our Photo
+                   <img src="./Images copy/couple.jpg" alt="">
                 </div>
             </div>
 
@@ -178,12 +178,12 @@
 
         <div class="gallery-grid">
 
-            <div class="gallery-item">Photo 1</div>
-            <div class="gallery-item">Photo 2</div>
-            <div class="gallery-item">Photo 3</div>
-            <div class="gallery-item">Photo 4</div>
-            <div class="gallery-item">Photo 5</div>
-            <div class="gallery-item">Photo 6</div>
+            <div class="gallery-item"><img src="./Images copy/Lois.jpg" alt=""></div>
+            <div class="gallery-item"><img src="./Images copy/Ezra.jpg" alt=""></div>
+            <div class="gallery-item"><img src="./Images copy/Lois2.jpg" alt=""></div>
+            <div class="gallery-item"><img src="./Images copy/Ezra2.jpg" alt=""></div>
+            <div class="gallery-item"><img src="./Images copy/Lois3.jpg" alt=""></div>
+            <div class="gallery-item"><img src="./Images copy/Ezra3.jpg" alt=""></div>
 
         </div>
 
@@ -198,35 +198,28 @@
             <h2>RSVP</h2>
         </div>
 
-        <form class="rsvp-form">
+        <form class="rsvp-form" method="post" action="file.php">
 
             <input
                 type="text"
-                placeholder="Your Name"
+                placeholder="Your Name" name="Name"
                 required
             >
 
             <input
                 type="email"
-                placeholder="Your Email"
+                placeholder="Your Email" name="Email"
                 required
             >
 
-            <select required>
+            <select required name="Attendance">
                 <option value="">Will you attend?</option>
                 <option value="yes">Yes, I'll be there</option>
                 <option value="no">Sorry, I can't make it</option>
             </select>
-
-            <input
-                type="number"
-                placeholder="Number of Guests"
-                min="1"
-            >
-
             <textarea
                 placeholder="Leave us a message..."
-                rows="5"
+                rows="5" name="Notes"
             ></textarea>
 
             <button type="submit">
