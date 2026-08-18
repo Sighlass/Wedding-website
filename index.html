@@ -110,8 +110,8 @@
             <div class="detail-card reveal ">
                 <div class="detail-icon">♡</div>
                 <h3>Ceremony</h3>
-                <p>12:00 PM</p>
-                <p>St. Mary's Church</p>
+                <p>11:00 PM</p>
+                <p>Crispan Suites Jos.</p>
             </div>
 
             <div class="detail-card reveal">
@@ -193,38 +193,56 @@
     <!-- RSVP -->
     <section id="rsvp" class="rsvp section">
 
-        <div class="section-heading">
+        <div class="section-heading reveal">
             <p>WE WOULD LOVE TO SEE YOU</p>
             <h2>RSVP</h2>
+            <p class="rsvp-intro">
+                Please let us know if you'll be joining us.
+            </p>
         </div>
 
-        <form class="rsvp-form" method="post" action="file.php">
+        <form id="rsvpForm" class="rsvp-form">
 
             <input
                 type="text"
-                placeholder="Your Name" name="Name"
+                id="name"
+                placeholder="Your Name" 
+                name="name"
                 required
             >
 
             <input
                 type="email"
-                placeholder="Your Email" name="Email"
+                id="email"
+                placeholder="Your Email" name="email"
                 required
             >
 
-            <select required name="Attendance">
+            <select required 
+            id="attendance"
+            name="attendance">
                 <option value="">Will you attend?</option>
                 <option value="yes">Yes, I'll be there</option>
                 <option value="no">Sorry, I can't make it</option>
             </select>
+
+            <input
+            type="number"
+            id="guests"
+            name="guests"
+            placeholder="Number of Guests"
+            min="1"
+            required
+        >
             <textarea
                 placeholder="Leave us a message..."
-                rows="5" name="Notes"
+                rows="5" name="notes"
             ></textarea>
 
-            <button type="submit">
+            <button type="submit" id="rsvpButton">
                 Send RSVP
             </button>
+            <p id="rsvpMessage"></p>
 
         </form>
 
