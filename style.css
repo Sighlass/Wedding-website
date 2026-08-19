@@ -375,32 +375,30 @@ a {
 
 .gallery-grid {
     max-width: 1100px;
-    margin: auto;
+    margin: 0 auto;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
     gap: 18px;
 }
 
 .gallery-item {
+    width: 100%;
     height: 350px;
     overflow: hidden;
 
     background: var(--white);
-
     border: 2px solid var(--white);
-    box-shadow: 0 5px 20px rgba(13, 18, 37, 0.12);
 }
 
 .gallery-item img {
     width: 100%;
     height: 100%;
 
+    display: block;
+
     object-fit: cover;
     object-position: center;
-
-    display: block;
 
     transition: transform 0.5s ease;
 }
@@ -408,7 +406,6 @@ a {
 .gallery-item:hover img {
     transform: scale(1.05);
 }
-
 
 /* RSVP */
 
@@ -502,86 +499,48 @@ footer p {
 
 /* MOBILE */
 
+/* TABLET / MOBILE */
+
 @media (max-width: 768px) {
 
-    .navbar {
-        padding: 20px;
-    }
-
-    .navbar nav {
-        display: none;
-    }
-
-    .hero h1 {
-        font-size: 70px;
-    }
-
-    .hero h1 span {
-        font-size: 35px;
-    }
-
-    .section {
-        padding: 80px 20px;
-    }
-
-    .section-heading h2 {
-        font-size: 38px;
-    }
-
-    .story-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .story-image {
-        height: 400px;
-    }
-
-    .details-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .countdown {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
-    }
-
-    .countdown span {
-        font-size: 45px;
-    }
-
     .gallery-grid {
-        grid-template-columns: 1fr 1fr;
-       justify-items: center;
-       width: 100%;
-       margin: 0 auto;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        width: 100%;
     }
 
     .gallery-item {
-        height: 200px;
-        width:90%;
-        max-width: 320px;
+        width: 100%;
+        height: 220px;
     }
 
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 @media (max-width: 480px) {
 
-    .hero h1 {
-        font-size: 58px;
-    }
-
     .gallery-grid {
         grid-template-columns: 1fr;
-        align-items: center;
-    }
-    .gallery-item img{
-        width: 340px;
-        height: 200px ;
+        gap: 15px;
+        width: 100%;
     }
 
+    .gallery-item {
+        width: 100%;
+        height: 300px;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
 }
-
 
 /* 
    SCROLL REVEAL ANIMATION*/
