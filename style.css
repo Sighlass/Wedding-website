@@ -244,36 +244,23 @@ a {
 
 .story-image {
     height: 500px;
-    overflow: hidden;
-    border-radius: 6px;
 }
 
 .image-placeholder {
     width: 100%;
     height: 100%;
-    overflow: hidden;
 
-    background: var(--powder-blue);
+    background: #b99f76;
 
     display: flex;
     align-items: center;
     justify-content: center;
-}
 
-.image-placeholder img {
+    color: #777;
+}
+.image-placeholder img{
     width: 100%;
     height: 100%;
-
-    object-fit: cover;
-    object-position: center;
-
-    display: block;
-
-    transition: transform 0.5s ease;
-}
-
-.image-placeholder img:hover {
-    transform: scale(1.03);
 }
 
 .story-text {
@@ -517,42 +504,83 @@ footer p {
 
 @media (max-width: 768px) {
 
+    .navbar {
+        padding: 20px;
+    }
+
+    .navbar nav {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 70px;
+    }
+
+    .hero h1 span {
+        font-size: 35px;
+    }
+
+    .section {
+        padding: 80px 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 38px;
+    }
+
+    .story-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .story-image {
+        height: 400px;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .countdown {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .countdown span {
+        font-size: 45px;
+    }
+
     .gallery-grid {
         grid-template-columns: 1fr 1fr;
-        gap: 12px;
+       justify-items: center;
+       width: 100%;
+       margin: 0 auto;
     }
 
     .gallery-item {
-        width: 100%;
-        height: 240px;
+        height: 200px;
+        width:90%;
+        max-width: 320px;
     }
 
-    .gallery-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
 }
 
 @media (max-width: 480px) {
 
+    .hero h1 {
+        font-size: 58px;
+    }
+
     .gallery-grid {
         grid-template-columns: 1fr;
-        gap: 15px;
+        align-items: center;
+    }
+    .gallery-item img{
+        width: 340px;
+        height: 200px ;
     }
 
-    .gallery-item {
-        width: 100%;
-        height: 300px;
-    }
-
-    .gallery-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
 }
-
 
 
 /* 
